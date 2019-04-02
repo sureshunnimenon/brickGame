@@ -1,6 +1,5 @@
 import Game from "./game.js";
 
-
 let canvas= document.getElementById("brickGame");
 let ctx = canvas.getContext("2d");
 
@@ -12,7 +11,7 @@ const GAME_WIDTH = canvas.width;
 // ctx.fillStyle = "blue"
 // ctx.fillRect(20,20,100,100) -- just for testing- commented out after test
 let game = new Game(GAME_WIDTH, GAME_HEIGHT)
-game.start();
+// game.start();
 
 // paddle.draw(ctx)
 
@@ -36,8 +35,7 @@ function gameLoop(timestamp){
 
     game.update(deltaTime);
     game.draw(ctx);
-    requestAnimationFrame(gameLoop);
-    
+    requestAnimationFrame(gameLoop);    
 }
 
 gameLoop()
